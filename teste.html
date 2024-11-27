@@ -39,14 +39,14 @@
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="username">Usuário:</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" required >
                 </div>
                 <div class="form-group">
                     <label for="password">Senha:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Entrar</button>
+                    <button type="submit">Entrar <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg></button>
                 </div>
             </form>
         </div>
@@ -86,6 +86,7 @@
     body {
       color: var(--text);
       background: var(--background);
+
     }
         /* Estilo geral com tema dark */
         body {
@@ -94,6 +95,7 @@
             padding: 0;
             background-color: #121212;
             color: #f0f0f0;
+            background-image: url(https://images2.alphacoders.com/544/544227.jpg);
         }
 
         header {
@@ -122,16 +124,17 @@
         /* Estilo do navbar */
         #navbar {
             position: fixed;
-            top: 50px;
+            top: 60px;
             right: 1860px;
             height: 100%;
             width: 250px;
-            background-color: #242424;
+            background-color: rgba(115, 115, 115, 0.212);
             box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             padding: 1rem;
             transition: right 0.3s ease-in-out;
+            backdrop-filter: blur(1vw);
         }
 
         #navbar.show {
@@ -222,10 +225,13 @@
             align-items: center;
             width: 100%;
             /*max-width: 400px;*/
-            padding: 30px;
-            background-color: #333; 
+            padding: 70px;
+            background-color: rgba(0, 0, 0, 0.1); 
             border-radius: 1vw;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(1vw);
+            font-weight: bolder;
+            color: black;
         }
 
         form {
@@ -236,6 +242,7 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 15px;
+            font-size: 0.9vw;
         }
 
         .form-group label {
@@ -249,28 +256,32 @@
             padding: 10px;
             font-size: 1em;
             border-radius: 0.5vw;
-            background-color: #444; /* Fundo mais escuro para o campo */
+            background-color: rgba(182, 182, 182, 0.089); /* Fundo mais escuro para o campo */
             color: #e0e0e0; /* Cor do texto do campo */
+            backdrop-filter: blur(1vw);
+          
         }
 
         .form-group input:focus {
-            border-color: #4CAF50; /* Cor da borda quando o campo está em foco */
+            
+            border-color: #019eb9; 
             outline: none;
         }
 
         .form-group button {
             padding: 10px;
-            background-color: #4CAF50; /* Cor verde do botão */
+            background-color: #4c7faf; /* Cor verde do botão */
             color: white;
             border: none;
             border-radius: 5px;
             font-size: 1.2em;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.9s ease;
+            margin-top: 50px;
         }
 
         .form-group button:hover {
-            background-color: #45a049; /* Cor do botão no hover */
+            background-color: #049cc2; /* Cor do botão no hover */
         }
 
     </style>
